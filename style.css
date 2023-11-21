@@ -378,7 +378,6 @@ section .title::after{
     border-radius: 80px;
 }
 
-/* Responsive styles */
 @media only screen and (max-width: 768px) {
     .centered-box {
         flex-direction: column;
@@ -911,7 +910,7 @@ color: white;
     max-width: 25rem;
 }
 
-@media(max-width: 1240px) {
+@media (max-width: 1240px) {
     .client__logos {
         overflow-x: scroll;
         padding: var(--gutter-normal);
@@ -920,7 +919,12 @@ color: white;
     .client__logo:not(:last-of-type) {
         margin-right: var(--gutter-medium);
     }
+
+    .client__logos::-webkit-scrollbar {
+        display: none;
+    }
 }
+
 .client .title::after{
     content: "what i work with";
 
