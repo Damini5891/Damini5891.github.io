@@ -27,6 +27,7 @@ $(document).ready(function() {
         $('.menu-btn i').toggleClass("active");
     });
 
+    
     var typed = new Typed(".typing", {
         strings: [ "Web Developer", "UI/UX Designer", "Software Developer", "Content Writer","Freelancer"],
         typeSpeed: 100,
@@ -64,6 +65,8 @@ $(document).ready(function() {
     });
 });
 
+
+
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 function opentab(tabname) {
@@ -77,3 +80,4 @@ function opentab(tabname) {
   event.currentTarget.classList.add("active-link");
   document.getElementById(tabname).classList.add("active-tab");
 }
+

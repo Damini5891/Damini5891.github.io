@@ -161,7 +161,7 @@ section .title::after{
 .home{
     display: flex;
     background: no-repeat center;
-    background-image: url('./images/background.jpg');
+    background-image: url('./images/black-bg.jpg');
     height: 100vh;
     min-height: 500px;
     background-size: cover;
@@ -169,6 +169,8 @@ section .title::after{
     font-family: 'Ubuntu', sans-serif;
     position: relative; 
     z-index: 1; 
+    margin: 0;
+    padding: 0;
 }
 
 .home .max-width {
@@ -191,6 +193,8 @@ section .title::after{
 }
 .home .home-content .text-1{
     font-size: 27px;
+    color:#c6ac8f;
+    font-weight: 700;
 
 }
 .home .home-content .text-2{
@@ -202,6 +206,10 @@ section .title::after{
 .home .home-content .text-3{
     font-size: 40px;
     margin: 5px 0;
+    color: #c6ac8f;
+    font-weight: 700;
+
+
 }
 .home .home-content .text-3 span{
     color: crimson;
@@ -230,7 +238,7 @@ section .title::after{
     height: 400px;
     width: 400px;
     object-fit:contain;
-    border-radius: 50%;
+    border-radius: 50% ;
     border: crimson;
 }
 .about .about-content .right{
@@ -247,7 +255,7 @@ section .title::after{
     text-align: justify;
 }
 .about .about-content .right a{
-    color: crimson;
+    color: rgb(133, 35, 55);
 }
 
 .tab-titles {
@@ -264,7 +272,10 @@ section .title::after{
     position: relative;
 }
 
-.tab-links::after {
+.tab-links:hover{
+    color: crimson;
+}
+/* .tab-links::after {
     content: '';
     width: 0;
     height: 3px;
@@ -276,12 +287,13 @@ section .title::after{
 }
 .tab-links.active-link::after{
     width:50%;
-}
+} */
 
 .tab-contents ul li {
     margin: 10px 0;
     color: aliceblue;
     font-size: 12px;
+    font-weight: 500;
 }
 
 .tab-contents ul li span {
@@ -376,7 +388,13 @@ section .title::after{
     padding: 20px;
     background-color: #222;
     border-radius: 80px;
+    transition: transform .2s;
 }
+.centered-box:hover{
+    transform: scale(1.25);
+}
+
+
 
 @media only screen and (max-width: 768px) {
     .centered-box {
@@ -895,7 +913,7 @@ color: white;
 
 .client, .services, .project, .blogs, .social, .contact, .about {
     background: no-repeat center;
-    background-image: url('./images/background.jpg');
+    background-image: url('./images/black-bg.jpg');
     background-size: cover;
 }
 
