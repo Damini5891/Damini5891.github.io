@@ -157,11 +157,22 @@ section .title::after{
     filter: brightness(90%);
 }
 
+.bubble::after {
+    content: '';
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    background-color: #0f0f10;
+    height: 85%;
+}
 
 .home{
     display: flex;
     background: no-repeat center;
-    background-image: url('./images/black-bg.jpg');
+    background-image: url('./images/black-bg.webp');
     height: 100vh;
     min-height: 500px;
     background-size: cover;
@@ -185,7 +196,8 @@ section .title::after{
     .home .max-width {
         flex-direction: column;
         margin-left: 10px;
-    }
+      }
+    
 }
 
 .home .max-width .row{
@@ -226,6 +238,8 @@ section .title::after{
 .home .home-content a:hover{
     color: crimson;
 }
+
+  
 
 .about .title::after{
     content: "who i am";
@@ -913,7 +927,7 @@ color: white;
 
 .client, .services, .project, .blogs, .social, .contact, .about {
     background: no-repeat center;
-    background-image: url('./images/black-bg.jpg');
+    background-image: url('./images/black-bg.webp');
     background-size: cover;
 }
 
@@ -947,3 +961,19 @@ color: white;
     content: "what i work with";
 
 }
+
+@keyframes cursorAnimation {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+  }
+  
+  body {
+
+    animation: cursorAnimation 1s infinite;
+  }
+  
+
+  
+
+  
