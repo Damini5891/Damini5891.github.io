@@ -962,17 +962,7 @@ color: white;
 
 }
 
-@keyframes cursorAnimation {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
-    100% { transform: translateY(0); }
-  }
-  
-  body {
 
-    animation: cursorAnimation 1s infinite;
-  }
-  
 
   
 
