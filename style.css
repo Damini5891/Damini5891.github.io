@@ -24,6 +24,8 @@ html{
     background: #555;
 }
 
+
+
 section{
     padding: 100px 0;
 }
@@ -249,7 +251,13 @@ section .title::after{
     color: crimson;
 }
 
-  
+.headimg{
+    height: 550px;
+    width: 400px;
+    object-fit:cover;
+    margin-left: 0;
+    border-radius: 72% 28% 73% 27% / 21% 71% 29% 79%  ;
+}  
 
 .about .title::after{
     content: "who i am";
@@ -263,7 +271,6 @@ section .title::after{
     width: 400px;
     object-fit:contain;
     border-radius: 50% ;
-    border: crimson;
 }
 .about .about-content .right{
     width: 55%;
