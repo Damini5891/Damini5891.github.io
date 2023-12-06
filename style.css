@@ -24,8 +24,6 @@ html{
     background: #555;
 }
 
-
-
 section{
     padding: 100px 0;
 }
@@ -159,29 +157,18 @@ section .title::after{
     filter: brightness(90%);
 }
 
-.bubble::after {
-    content: '';
-    border-top-left-radius: 50% 100%;
-    border-top-right-radius: 50% 100%;
-    position: absolute;
-    bottom: 0;
-    z-index: -1;
-    width: 100%;
-    background-color: #0f0f10;
-    height: 85%;
-}
 
-.home{
+.home {
     display: flex;
     background: no-repeat center;
-    background-image: url('./images/black-bg.webp');
+    background-color: #111;
     height: 100vh;
     min-height: 500px;
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
-    position: relative; 
-    z-index: 1; 
+    position: relative;
+    z-index: 1;
     margin: 0;
     padding: 0;
 }
@@ -192,32 +179,49 @@ section .title::after{
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
 }
 
-@media only screen and (max-width: 768px) {
-    .home .max-width {
-        flex-direction: column;
-        margin-left: 10px;
-      }
-      .bubble::after {
-        content: '';
-        border-top-left-radius: 50% 100%;
-        border-top-right-radius: 50% 100%;
-        position: absolute;
-        bottom: 0;
-        z-index: -1;
-        width: 100%;
-        background-color: #0f0f10;
+.home img {
+    position: absolute;
+    bottom: -25px;
+    left: 65%; 
+    transition: transform 0.3s ease-out; 
+}
+
+.home:hover img {
+    transform: translateY(-10px) scale(1.1); }
+
+    @media only screen and (max-width: 768px) {
+        .home .max-width {
+            flex-direction: column;
+            margin-left: 10px;
+        }
+    
+        .home img {
+            position: absolute;
+            margin-top: 20px;
+            height: 300px; 
+            width: 300px; 
+            left: 50%; 
+            bottom: 0; 
+            transition: transform 0.3s ease-out; 
+        }
+    
+        .home:hover img {
+            transform: translateY(-10px) scale(1.1);
+        }
     }
     
-}
+
+
 
 .home .max-width .row{
   margin-right: 0;
 }
 .home .home-content .text-1{
     font-size: 27px;
-    color:#c6ac8f;
+    color:#cdb4db;
     font-weight: 700;
 
 }
@@ -230,7 +234,7 @@ section .title::after{
 .home .home-content .text-3{
     font-size: 40px;
     margin: 5px 0;
-    color: #c6ac8f;
+    color: #cdb4db;
     font-weight: 700;
 
 
@@ -251,13 +255,7 @@ section .title::after{
     color: crimson;
 }
 
-.headimg{
-    height: 550px;
-    width: 400px;
-    object-fit:cover;
-    margin-left: 0;
-    border-radius: 72% 28% 73% 27% / 21% 71% 29% 79%  ;
-}  
+
 
 .about .title::after{
     content: "who i am";
@@ -269,8 +267,6 @@ section .title::after{
 .about .about-content .left img{
     height: 400px;
     width: 400px;
-    object-fit:contain;
-    border-radius: 50% ;
 }
 .about .about-content .right{
     width: 55%;
@@ -286,7 +282,7 @@ section .title::after{
     text-align: justify;
 }
 .about .about-content .right a{
-    color: rgb(133, 35, 55);
+    color: crimson;
 }
 
 .tab-titles {
@@ -328,7 +324,7 @@ section .title::after{
 }
 
 .tab-contents ul li span {
-    color: rgb(133, 35, 55);
+    color: crimson;
     font-size: 14px;
 }
 .tab-contents{
@@ -383,7 +379,7 @@ section .title::after{
     transition: all 0.3s ease;
 }
 .services .serv-content .card:hover{
-    background: crimson;
+    background: #cdb4db;
 }
 .services .serv-content .card .box{
     transition: all 0.3s ease;
@@ -397,8 +393,9 @@ section .title::after{
     transition: color 0.3s ease;
 }
 .services .serv-content .card:hover i{
-    color: #fff;
+    color: crimson;
 }
+
 .services .serv-content .card .text{
     font-size: 25px;
     font-weight: 500;
@@ -469,7 +466,7 @@ section .title::after{
     transition: all 0.3s ease;
 }
 .blogs .carousel .card:hover{
-    background: crimson;
+    background: #cdb4db;
 }
 .blogs .carousel .card .box{
     display: flex;
@@ -486,7 +483,7 @@ section .title::after{
     font-weight: 300;
     font-style: italic;
     margin: 10px 0 7px 0;
-    color: rgb(90, 0, 18);
+    color: crimson;
 }
 .blogs .carousel .card .text-p{
 color: white;
@@ -496,7 +493,7 @@ color: white;
     width: 150px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid crimson;
+    border: 5px solid #cdb4db;
     transition: all 0.3s ease;
 }
 .blogs .carousel .card:hover img{
@@ -553,7 +550,7 @@ color: white;
 }
 .contact .contact-content .row i{
     font-size: 25px;
-    color: crimson;
+    color: #cdb4db;
 }
 .contact .contact-content .info .head{
     font-weight: 500;
@@ -798,7 +795,7 @@ color: white;
    
    .cta:hover:before {
     width: 100%;
-    background: crimson;
+    background: #cdb4db;
    }
    
    .cta:hover svg {
@@ -849,7 +846,19 @@ color: white;
   }
   
   .project-card p {
-    color: #666;
+    color: #cdb4db;
+  }
+
+  .link{
+    font-size: 30px;
+    line-height: 60px;
+    transition: .3s;
+    color: #fff;
+    margin-top: 20px;
+  }
+
+  .link:hover{
+    transform: translate(0, -10%);
   }
   
   .visit-link {
@@ -943,9 +952,15 @@ color: white;
     background-color: #1DA1F2;
 }
 
-.client, .services, .project, .blogs, .social, .contact, .about {
+.client,
+.services,
+.project,
+.blogs,
+.social,
+.contact,
+.about {
     background: no-repeat center;
-    background-image: url('./images/black-bg.webp');
+    background-color: #111;
     background-size: cover;
 }
 
@@ -981,7 +996,25 @@ color: white;
 }
 
 
+.counter {
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-  
+#visitCount {
+    display: inline-block;
+    width: 30px; 
+    height: 30px;
+    border: 10px;
+    background-color: crimson;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px; 
+    font-weight: 900;
+    margin-top: 50px;
+}
+
 
   
