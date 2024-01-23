@@ -214,6 +214,12 @@ section .title::after{
         
     }
 
+    @media (max-width: 768px) {
+        .social-menu {
+          display: none;
+        }
+      }
+      
 
 
 .home .max-width .row{
@@ -1009,25 +1015,7 @@ color: white;
 }
 
 
-.counter {
-    color:#fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-#visitCount {
-    display: inline-block;
-    width: 30px; 
-    height: 30px;
-    border: 10px;
-    background-color: crimson;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 30px; 
-    font-weight: 900;
-    margin-top: 50px;
-}
 
 
   
